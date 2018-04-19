@@ -13,6 +13,7 @@ describe 'Lesson3-A introduce to integration test', js: true do
 
   it 'sample capybara spec' do
     visit '/lesson2_as'
+    
     click_link('New Lesson2 A')
     sleep(1)
     fill_in('String test', with: 'John')
@@ -22,5 +23,17 @@ describe 'Lesson3-A introduce to integration test', js: true do
 
     expect(page).to have_content("Lesson2 a was successfully created.")
     expect(Lesson2A.first.string_test).to eq 'John'
+
+    click_link('Back')
+    sleep(1)
+    save_screenshot("/home/saharak/back.jpg")
+    click_link('Show')
+    sleep(1)
+    save_screenshot("/home/saharak/show.jpg")
+
+    expect(page).to have_content("String test: dove")
+    expect(Lesson2A.first.Datetime_test).to eq '2018-04-19 06:11:00 UTC'
   end
+
+
 end
