@@ -80,6 +80,30 @@ describe 'Lesson3-A introduce to integration test', js: true do
     # save_screenshot("/home/saharak/Destroy.jpg")
     #เช็คว่า ลบ สำเร็จ
     expect(page).to have_content("Lesson2 a was successfully destroyed.")
+#####
+    click_link('New Lesson2 A')
+    sleep(1)
+    fill_in('String test', with: 'Dove')
+    find('#lesson2_a_integer_test').set(3340)
+    find('[name="commit"]').click
+    sleep(1)
+
+    click_link('Back')
+    sleep(1)
+
+    click_link('New Lesson2 A')
+    sleep(1)
+    fill_in('String test', with: 'Dove2')
+    find('#lesson2_a_integer_test').set(0433)
+    find('[name="commit"]').click
+    sleep(1)
+
+    click_link('Back')
+    sleep(1)
+
+    click_on('lesson2_as/1')
+
+    # find(:xpath, "//a[@href='lesson2_as/1']").click
 
   end
 
