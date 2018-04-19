@@ -31,8 +31,27 @@ describe 'Lesson3-A introduce to integration test', js: true do
     sleep(1)
     save_screenshot("/home/saharak/show.jpg")
 
-    expect(page).to have_content("String test: dove")
-    expect(Lesson2A.first.Datetime_test).to eq '2018-04-19 06:11:00 UTC'
+    expect(Lesson2A.first.integer_test).to eq 5674
+    expect(Lesson2A.first.boolean_test).to eq false
+
+    save_screenshot("/home/saharak/putsstring.jpg")
+
+    click_link('Edit')
+    sleep(1)
+    expect(Lesson2A.first.string_test).to eq 'John'
+    fill_in('String test', with: 'Dovetest')
+    find('#lesson2_a_integer_test').set(20)
+
+    find('[name="commit"]').click
+    sleep(1)
+
+    expect(page).to have_content("Lesson2 a was successfully updated.")
+    expect(Lesson2A.first.string_test).to eq 'Dove'
+
+    save_screenshot("/home/saharak/edit.jpg")
+
+
+
   end
 
 
