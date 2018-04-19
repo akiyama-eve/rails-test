@@ -15,12 +15,15 @@ save_screenshot("/Users/xxxxx/Desktop/test1.jpg") # ดูผลลัพธ์�
 ```
 
 Model
+
 ข้อมูลเพิ่มเติมเกี่ยวกับ FactoryBot https://github.com/thoughtbot/factory_bot/wiki (Lib ช่วยในการเตรียมข้อมูลก่อนเทส)
 ข้อมูลเพิ่มเติมเกี่ยวกับ Faker https://github.com/stympy/faker (Lib ช่วยในการ random ข้อมูล)
 
 Controller
+
 https://everydayrails.com/2012/04/07/testing-series-rspec-controllers.html
 
 View + Integration Testing
+
 การใช้งานลักๆของ capybara https://www.sitepoint.com/basics-capybara-improving-tests/
 syntax ที่ใช่บ่อยๆ https://gist.github.com/zhengjia/428105
