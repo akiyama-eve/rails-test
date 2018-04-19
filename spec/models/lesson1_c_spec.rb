@@ -21,6 +21,7 @@ describe "Lesson1-C CRUD Test model with FactoryBot" do
   end
 
   it 'should read' do
+    puts lesson1_c_kub.inspect
     expect(lesson1_c.string_test).to eq "Sawadde Ja"
   end
 
