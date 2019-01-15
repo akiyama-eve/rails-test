@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   authenticated :user do
     root to: 'home#index'
   end
-
+  get "email_sender/" => "email_sender#index"
   resources :users, only: [:index, :show]
 
   root to: redirect('/users/sign_in')

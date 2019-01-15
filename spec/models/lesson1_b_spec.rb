@@ -35,11 +35,11 @@ describe "Lesson1-B CRUD Test model" do
   # bundle exec rspec ./spec/models/lesson1_b_spec.rb:36
   it 'should can delete' do
     # check record exist
-    expect(Lesson1B.find(lesson1_b.id).blank?).to be_falsey
+    expect(Lesson1B.find(lesson1_b.id).blank?).to eq false
     # delete record
     lesson1_b.destroy
     # check deleted
-    expect(Lesson1B.where(id: lesson1_b.id).first.blank?).to be_truthy
+    expect(Lesson1B.where(id: lesson1_b.id).first.blank?).to eq true
   end
 
   # try another attribute
