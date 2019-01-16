@@ -35,4 +35,5 @@ Devise generate custom view & controller
 rails generate devise:views
 rails generate devise:controllers
 ```
+ตัวอย่าง code จริงๆใน controller session
 https://github.com/plataformatec/devise/blob/master/app/controllers/devise/sessions_controller.rb
