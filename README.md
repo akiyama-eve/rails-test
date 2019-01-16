@@ -35,3 +35,4 @@ Devise generate custom view & controller
 rails generate devise:views
 rails generate devise:controllers
 ```
+https://github.com/plataformatec/devise/blob/master/app/controllers/devise/sessions_controller.rb
