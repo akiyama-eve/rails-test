@@ -27,3 +27,9 @@ View + Integration Testing
 
 การใช้งานลักๆของ capybara https://www.sitepoint.com/basics-capybara-improving-tests/
 syntax ที่ใช่บ่อยๆ https://gist.github.com/zhengjia/428105
+
+
+
+Devise generate custom view & controller
+rails generate devise:views
+rails generate devise:controllers
