@@ -37,3 +37,4 @@ rails generate devise:controllers
 ```
 ตัวอย่าง code จริงๆใน controller session
 https://github.com/plataformatec/devise/blob/master/app/controllers/devise/sessions_controller.rb
+https://github.com/plataformatec/devise/blob/master/app/controllers/devise/passwords_controller.rb
