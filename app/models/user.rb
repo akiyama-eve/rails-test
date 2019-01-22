@@ -2,7 +2,7 @@ class User < ApplicationRecord
   rolify
   acts_as_paranoid
 
-  devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
+  devise :database_authenticatable, :recoverable, :rememberable, :validatable
 
   after_create :assign_default_role
 

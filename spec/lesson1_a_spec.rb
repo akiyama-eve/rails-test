@@ -12,4 +12,13 @@ describe "Lesson1-A Model testing" do
   end
 
   # try Lesson1A.divide
+  it 'should return plus of two number' do
+    result = Lesson1A.divide(2,2)
+    expect(result).to eq 1
+  end
+
+  it 'should return plus of two number' do
+    result = Lesson1A.divide(2,0)
+    expect(result).to eq 0
+  end
 end

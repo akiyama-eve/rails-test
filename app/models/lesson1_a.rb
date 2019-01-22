@@ -3,6 +3,9 @@ class Lesson1A
     x + y
   end
   def self.divide(x, y)
+    if(y == 0)
+      return nil
+    end
     x / y
   end
 end
