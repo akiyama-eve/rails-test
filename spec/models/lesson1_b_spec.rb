@@ -20,16 +20,47 @@ describe "Lesson1-B CRUD Test model" do
     expect(lesson1_b.string_test).to eq "Sawadde Ja"
   end
 
-  # bundle exec rspec ./spec/models/lesson1_b_spec.rb:24
+
+  #testdove
+  
+  it 'should read' do
+    expect(lesson1_b.datetime_test).to eq DateTime.now
+  end
+
+  it 'should read' do
+    expect(lesson1_b.integer_test).to eq 12345
+  end
   it 'should update' do
     # check old string_test
-    expect(lesson1_b.string_test).to eq "Sawadde Ja"
+    expect(lesson1_b.integer_test).to eq 12345
     # update string_test
-    lesson1_b.string_test = "Sawadde Ja 2"
+    lesson1_b.integer_test = 54321
     lesson1_b.save
     # check new string_test
     lesson1_b_new = Lesson1B.find(lesson1_b.id)
-    expect(lesson1_b_new.string_test).to eq "Sawadde Ja 2"
+    expect(lesson1_b_new.integer_test).to eq 54321
+  end
+
+  it 'should can delete' do
+    # check record exist
+    expect(Lesson1B.find(lesson1_b.id).blank?).to be_falsey
+    # delete record
+    lesson1_b.destroy
+    # check deleted
+    expect(Lesson1B.where(id: lesson1_b.id).first.blank?).to be_truthy
+  end
+  #endtestdove
+
+  # bundle exec rspec ./spec/models/lesson1_b_spec.rb:24
+  it 'should update' do
+    # check old string_test
+    expect(lesson1_b.integer_test).to eq 12345
+    # update string_test
+    lesson1_b.integer_test = 54321
+    lesson1_b.save
+    # check new string_test
+    lesson1_b_new = Lesson1B.find(lesson1_b.id)
+    expect(lesson1_b_new.integer_test).to eq 54321
   end
 
   # bundle exec rspec ./spec/models/lesson1_b_spec.rb:36
