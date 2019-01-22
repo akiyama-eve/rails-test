@@ -20,6 +20,26 @@ describe "Lesson1-B CRUD Test model" do
     expect(lesson1_b.string_test).to eq "Sawadde Ja"
   end
 
+  it 'should read' do
+    expect(lesson1_b.integer_test).to eq 12345
+  end
+
+
+
+  it 'should update' do
+    # check old string_test
+    expect(lesson1_b.integer_test).to eq 12345
+    # update string_test
+    lesson1_b.integer_test = 456
+    lesson1_b.save
+    # check new string_test
+    lesson1_b_new = Lesson1B.find(lesson1_b.id)
+    expect(lesson1_b_new.integer_test).to eq 456
+  end
+
+
+
+
   # bundle exec rspec ./spec/models/lesson1_b_spec.rb:24
   it 'should update' do
     # check old string_test
